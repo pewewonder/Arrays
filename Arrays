@@ -1,0 +1,65 @@
+import java.util.Scanner;
+public class JavaArrays {
+	public static void main(String[] args)
+	{
+		// Initialize and declare the constant for the size of the first Array. 
+		final int MAX_SIZE = 999;
+		// Create the array named values with the max size for this task (999).
+		int[] values = new int[MAX_SIZE];
+		int[] values2 = new int[MAX_SIZE]; 
+		int[] values3 = new int[MAX_SIZE];
+		int noOfNumbers = 0;
+		int currentSize = 0;
+		Scanner scan = new Scanner(System.in);
+		//Userinput part
+		System.out.print("How many numbers do you wish the array to contain? ");
+		noOfNumbers = scan.nextInt();
+		currentSize = noOfNumbers;
+		
+		for (int i = 0; i < values.length && i < currentSize ; i++)
+		{
+			values[i] = (int)(Math.random() * 999 + 1);	
+			System.out.print(values[i] + " ");
+		}
+			
+		for (int i = 0; i < currentSize; i++)
+		{
+			if (values[i] < 500)
+			{
+			values[i] = values2[i];
+			System.out.println(values[i]);
+			}
+		}
+		
+	
+			/*
+			if(values[i] >= 500)
+				{
+					for (int k = 0; k < currentSize; k++)
+					{
+					values[i] = values[k];
+					System.out.println("Numbers below 500 are: ");
+					System.out.println(values[k] + " ");
+					}
+					
+				
+				}
+				else 
+				{
+					for (int z = 0; z < currentSize; z++)
+					{
+					values[i] = values[z];	
+					System.out.println("Numbers above 500 are: ");
+					System.out.println(values[z] + " ");
+					}
+				}
+			*/
+		
+	}
+}
+
+
+
+
+
+
